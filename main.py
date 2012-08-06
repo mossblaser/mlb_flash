@@ -2,6 +2,7 @@
 
 import sys
 from textwrap import wrap
+from elftools.elf.elffile import ELFFile
 
 from flash import ManchesterFlash
 
@@ -219,7 +220,7 @@ def do_write_elf(flash, args):
 			data_sections[section["sh_addr"]] = section.data()
 	f.close()
 	
-	for addr, data in data_sections.iter_items():
+	for addr, data in data_sections.iteritems():
 		print "Writing section at %08X"%addr
 		pretty_write(flash, addr, data)
 	
