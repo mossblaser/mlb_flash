@@ -2,3 +2,9 @@ Flash (aaaaahhhhh!)
 ===================
 
 Flash programmer for the lab boards.
+
+Usage:
+
+python main.py [serial port]
+
+Type help for more!
